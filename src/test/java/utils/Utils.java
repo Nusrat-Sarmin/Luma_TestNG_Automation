@@ -1,12 +1,11 @@
 package utils;
 
 import org.json.simple.JSONArray;
-import com.google.gson.JsonArray;
-//import jdk.nashorn.internal.parser.JSONParser;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+//import org.json.simple.parser.ParseException;
 import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -42,12 +41,14 @@ public class Utils {
     }
 
     //Save data for registration
-    public void saveJsonList(String email, String password) throws IOException, ParseException {
+    public void saveJsonList(String firstName, String lastName, String email, String password) throws IOException, ParseException {
         String fileName = "./src/test/resources/Users.json";
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader(fileName));
         JSONArray jsonArray = (JSONArray) obj;
         JSONObject userObject = new JSONObject();
+        userObject.put("firstname", firstName);
+        userObject.put("lastname", lastName);
         userObject.put("email", email);
         userObject.put("password", password);
 

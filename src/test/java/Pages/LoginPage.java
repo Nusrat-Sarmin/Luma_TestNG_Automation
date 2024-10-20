@@ -21,6 +21,8 @@ public class LoginPage {
 
    @FindBy(tagName = "a")
    public List<WebElement> linkLogin;
+   @FindBy(xpath = "//a[contains(text(),'My Account')]")
+   public WebElement navBarMyAccount;
     WebDriver driver;
 
     public LoginPage(WebDriver driver) {

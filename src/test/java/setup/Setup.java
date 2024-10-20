@@ -22,6 +22,7 @@ public class Setup {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().deleteAllCookies();
+        driver.get("https://luma.enablementadobe.com/");
     }
 
     @AfterMethod

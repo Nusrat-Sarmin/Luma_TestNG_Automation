@@ -4,6 +4,7 @@ package TestRunner;
 
 import Pages.AddToCartPage;
 import Pages.LoginPage;
+import io.qameta.allure.Allure;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -27,7 +28,6 @@ public class AddToCartTestRunner extends Setup {
 
     @BeforeTest
     public void doLogin() throws IOException, ParseException, InterruptedException {
-        driver.get("https://luma.enablementadobe.com/");
         loginPage = new LoginPage(driver);
         Utils utils = new Utils();
         Thread.sleep(3000);
@@ -38,7 +38,7 @@ public class AddToCartTestRunner extends Setup {
         loginPage.doLogin(utils.getEmail(), utils.getPassword());
     }
 
-    @Test
+    @Test(description = "Add to cart")
     public void doAddToCart() {
         //Thread.sleep(3000);
         addToCartPage = new AddToCartPage(driver);
@@ -52,6 +52,8 @@ public class AddToCartTestRunner extends Setup {
         String urlActual = driver.getCurrentUrl();
         String urlExpected = "luma";
         Assert.assertTrue(urlActual.contains(urlExpected));
+        Allure.description("This test verifies that a user can successfully add an item to the shopping cart. It ensures" +
+                " that the cart is updated with the selected product and reflects the correct quantity and price.");
 
     }
 }
