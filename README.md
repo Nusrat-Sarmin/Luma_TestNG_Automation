@@ -1,8 +1,8 @@
-# Selenium-TestNG-Automation
+# Luma-TestNG-Automation
 
-This is a complete project where an comprehensive human capital management site is automated by writing test suites using selenium-webdriver and TestNg as testing framework.
+This is a complete project where an comprehensive human capital management site is automated by writing test suites using selenium-webdriver and TestNg as testing framework.A well-designed ecommerce site offers a seamless shopping experience.
 
-The following key modules/pages are automated:
+The following key modules/pages are automated: 
 
 Login
 
