@@ -52,3 +52,13 @@ allure generate allure-results --clean -o allure-report
 allure serve allure-results
 ```
 
+View Report
+
+
+
+
+
+<img width="903" alt="TestNg01" src="https://github.com/user-attachments/assets/9ed28183-8447-4f96-9a48-64a009baa337">
+
+
+<img width="903" alt="Testng02" src="https://github.com/user-attachments/assets/e63a329a-7288-4df8-a19c-9e526f7719ed">
